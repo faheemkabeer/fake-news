@@ -1,0 +1,81 @@
+/* General reset and font settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  /* Add a background image with gradient overlay */
+  background: 
+    url('baground/fakenews1.jpg') no-repeat center center fixed, /* Background image */
+    linear-gradient(45deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8)); /* Gradient overlay */
+  background-size: cover, 400% 400%; /* Ensure the image and gradient are sized correctly */
+  animation: gradientAnimation 15s ease infinite; /* Creates the animated effect */
+
+  /* Parallax effect (background stays fixed while content scrolls) */
+  background-attachment: fixed;
+
+  /* Set the text color to black for better contrast */
+  color: rgb(0, 0, 0);
+
+  /* Full-screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  /* Optional: Add a subtle blur effect to the background */
+  backdrop-filter: blur(5px);
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background for better text readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Slightly larger font size */
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition for button hover effect */
+}
+
+button:hover {
+  background-color: #45a049;
+}
